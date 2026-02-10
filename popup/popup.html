@@ -42,6 +42,27 @@
                 margin-right: 5px;
             }
 
+            .title-hint-flex {
+                display: flex;
+                
+                align-items: center;
+                align-content: center;
+            }
+
+            .title-hint-flex div {
+                margin-right: 10px;
+            }
+
+            .circleq {
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 20px;
+
+                font-size: 8pt;
+
+                padding: 3px 3px 3px 3px;
+            }
+
             .bottom-bar {
                 display: flex;
 
@@ -52,7 +73,15 @@
 
     <body>
         <div>
-            <h3>Mirror</h3>
+            <div class="title-hint-flex">
+                <div>
+                    <h3>Mirror</h3>
+                </div>
+
+                <div class="circleq">
+                    <b>?</b>
+                </div>
+            </div>
 
             <div class="select-description">
                 <p>The mirror which broken links on marxists.org will be redirected to.</p>

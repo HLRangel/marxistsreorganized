@@ -1,11 +1,28 @@
+let maindomain = "marxists.architexturez.net";
 
-/*
-browser.runtime.onMessage.addListener(getBrowserMessage);
+function getRequest(message, sender, sendResponse) {
+    if(message.text == "what") {
+        console.log(message.text);
 
-function printProperty(item) {
-    console.log(item);
+        browser.storage.local.get("redirectdomain").then(function (item) {
+            console.log(item);
+            maindomain = item.redirectdomain;
+        },
+        
+        function (error) {
+            console.log("no default domain!");
+        });
+
+        sendResponse({
+            response: maindomain
+        });
+    } else {
+        console.log("request without appropriate response");
+
+        sendResponse({
+            response: undefined
+        });
+    }
 }
 
-function getBrowserMessage(message) {
-    browser.storage.local.get(message.text).then(printProperty);
-}*/
+browser.runtime.onMessage.addListener(getRequest);

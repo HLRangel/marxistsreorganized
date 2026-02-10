@@ -323,6 +323,26 @@ function fixLinks(newHost) {
     }
 }
 
+function goodResponse(response) {
+    fixLinks(response.response)
+}
+
+function badResponse(badresponse) {
+    console.log(`Unable to set mirror. Error: ${badresponse}`);
+
+    fixLinks("marxists.architexturez.net");
+}
+
+function main() {
+    browser.runtime.sendMessage(
+        {
+            text: "what"
+        }
+    ).then(goodResponse, badResponse);
+}
+
+main();
+
 document.body.style.border = "5px solid red";
 
 

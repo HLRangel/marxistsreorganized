@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+            @font-face {
+                font-family: "Atkinson Hyperlegible Next";
+                src: url("/popup/fonts/AtkinsonHyperlegibleNext.ttf");
+            }
+
+            body {
+                font-family: "Atkinson Hyperlegible Next";
+                font-weight: 400;
+
+                background-color: #fff7f8;
+            }
+
+            h3 {
+                margin: 0;
+
+                font-size: 16pt;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .select-description {
+                margin-top: 10px;
+            }
+
+            .new-mirror-flex {
+                display: flex;
+
+                align-items: center;
+                align-content: center;
+            }
+
+            .new-mirror-flex div {
+                margin-right: 5px;
+            }
+
+            .bottom-bar {
+                display: flex;
+
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3>Mirror</h3>
+
+            <div class="select-description">
+                <p>The mirror which broken links on marxists.org will be redirected to.</p>
+
+                <div class="select-flex">
+                    <select name="mirrors" id="mirrors">
+                        <option value="marxists.architexturez.net">marxists.architexturez.net</option>
+                        <option value="marxists.comrades.sbs">marxists.comrades.sbs</option>
+                    </select>
+
+                    <a href="#" id="apply-button">Apply</a>
+                </div>
+            </div>
+
+            <div class="new-mirror-flex">
+                <div>
+                    <p>+</p>
+                </div>
+
+                <div>
+                    <p>Add new mirror</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div>
+
+            </div>
+
+            <div style="margin-left: auto; float: right; right: 0;">
+                <img src="/popup/images/reorganized.avif" width="194" height="39">
+            </div>
+        </div>
+    </body>
+
+    <script src="/popup/scripts/popup.js"></script>
+</html>
